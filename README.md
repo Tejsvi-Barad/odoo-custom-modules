@@ -1,33 +1,56 @@
-# Student Course Management System using Odoo 18
+# Student Course Management System
+
+A custom Odoo 18 module for managing students, courses, enrollments, and related academic information.
 
 ## Overview
-A custom Odoo 18 module for managing students, courses, enrollments, activities, and student ID cards.
 
-## Technologies
+The Student Course Management System is developed using the Odoo framework. It provides a centralized interface for managing student and course-related records.
+
+## Features
+
+- Student Management
+- Course Management
+- Student Enrollment Management
+- Activity Management
+- Student ID Card Management
+- Dashboard Interface
+
+## Technologies Used
+
 - Odoo 18
 - Python
 - PostgreSQL
 - XML
 - Odoo ORM
-
-## Features
-- Student management
-- Course management
-- Student enrollment
-- Course fee management
-- Student activity management
-- Student ID card records
-- Dashboard
+- JavaScript
+- CSS
 
 ## Installation
-1. Copy the student_course module into your Odoo custom addons directory.
-2. Configure the addons path in odoo.conf.
-3. Restart the Odoo server.
-4. Update the Apps List.
-5. Install the module.
+
+1. Clone or download this repository.
+2. Copy the `student_course` folder into your Odoo custom addons directory.
+3. Make sure the custom addons directory is configured in your Odoo configuration file.
+4. Restart the Odoo server.
+5. Open Odoo and activate Developer Mode.
+6. Update the Apps List.
+7. Search for **Student Course Management** and install the module.
+
+## Project Structure
+
+```text
+student_course/
+├── models/
+├── security/
+├── static/
+├── views/
+├── __init__.py
+└── __manifest__.py
+```
 
 ## Author
+
 Tejsvi Barad
 
 ## Project Status
-Learning project.
+
+Learning project developed to practice custom module development in Odoo 18.
