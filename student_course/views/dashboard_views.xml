@@ -1,0 +1,14 @@
+
+<odoo>
+    <record id="action_student_course_dashboard"
+            model="ir.actions.client">
+        <field name="name">Student Course Dashboard</field>
+        <field name="tag">student_course_dashboard</field>
+    </record>
+
+    <menuitem id="menu_student_course_dashboard"
+              name="Dashboard"
+              parent="menu_student_root"
+              action="action_student_course_dashboard"
+              sequence="1"/>
+</odoo>

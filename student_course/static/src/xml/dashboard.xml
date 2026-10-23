@@ -1,0 +1,124 @@
+
+
+<templates xml:space="preserve">
+    <t t-name="student_course.Dashboard">
+        <div class="o_student_dashboard">
+
+            <div class="o_student_dashboard_header">
+                <div>
+                    <h1>Student Course Dashboard</h1>
+                    <p>Overview of students, courses and enrollments</p>
+                </div>
+
+                <button class="btn btn-primary"
+                        t-on-click="refreshDashboard"
+                        t-att-disabled="state.loading">
+                    Refresh Data
+                </button>
+            </div>
+
+            <t t-if="state.loading">
+                <div class="alert alert-info">
+                    Loading dashboard...
+                </div>
+            </t>
+
+            <t t-elif="state.error">
+                <div class="alert alert-danger">
+                    Dashboard data could not be loaded.
+                    Check the server log and model access rights.
+                    <button class="btn btn-secondary ms-2"
+                            t-on-click="refreshDashboard">
+                        Retry
+                    </button>
+                </div>
+            </t>
+
+            <t t-else="">
+                <div class="o_student_stat_grid">
+
+                    <div class="o_student_stat_card blue">
+                        <span>Total Students</span>
+                        <strong t-esc="state.students"/>
+                        <button t-on-click="openStudents">
+                            View Students →
+                        </button>
+                    </div>
+
+                    <div class="o_student_stat_card green">
+                        <span>Total Courses</span>
+                        <strong t-esc="state.courses"/>
+                        <button t-on-click="openCourses">
+                            View Courses →
+                        </button>
+                    </div>
+
+                    <div class="o_student_stat_card purple">
+                        <span>Total Enrollments</span>
+                        <strong t-esc="state.enrollments"/>
+                        <button t-on-click="openEnrollments">
+                            View Enrollments →
+                        </button>
+                    </div>
+
+                    <div class="o_student_stat_card orange">
+                        <span>Total Course Fees</span>
+                        <strong t-esc="formatCurrency(state.totalFees)"/>
+                        <small>Sum of fees for all courses</small>
+                    </div>
+
+                </div>
+
+                <div class="o_student_chart_grid">
+
+                    <section class="o_student_chart_card">
+                        <h3>Enrollment Status</h3>
+
+                        <t t-foreach="state.statuses"
+                           t-as="item" t-key="item.name">
+
+                            <div class="o_student_chart_row">
+                                <div class="o_student_chart_label">
+                                    <span t-esc="item.name"/>
+                                    <strong t-esc="item.count"/>
+                                </div>
+
+                                <div class="o_student_bar_background">
+                                    <div class="o_student_bar status_bar"
+                                         t-att-style="'width: ' + item.percentage + '%'"/>
+                                </div>
+                            </div>
+
+                        </t>
+                    </section>
+
+                    <section class="o_student_chart_card">
+                        <h3>Course-wise Enrollments</h3>
+
+                        <t t-if="!state.courseStats.length">
+                            <p>No courses found.</p>
+                        </t>
+
+                        <t t-foreach="state.courseStats"
+                           t-as="item" t-key="item.name">
+
+                            <div class="o_student_chart_row">
+                                <div class="o_student_chart_label">
+                                    <span t-esc="item.name"/>
+                                    <strong t-esc="item.count"/>
+                                </div>
+
+                                <div class="o_student_bar_background">
+                                    <div class="o_student_bar course_bar"
+                                         t-att-style="'width: ' + item.percentage + '%'"/>
+                                </div>
+                            </div>
+
+                        </t>
+                    </section>
+
+                </div>
+            </t>
+        </div>
+    </t>
+</templates>
