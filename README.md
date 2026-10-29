@@ -4,7 +4,7 @@ A collection of custom modules developed using Odoo 18 as part of my M.Sc. IT le
 
 ## Projects
 
-# 1. Student Course & Enrollment Management System
+## 1. Student Course & Enrollment Management System
 
 ## Features
 
@@ -15,7 +15,7 @@ A collection of custom modules developed using Odoo 18 as part of my M.Sc. IT le
 - Student ID Card Management
 - Dashboard Interface
 
-# 2. Computer Service Management System
+## 2. Computer Service Management System
 
 ## Features
 
