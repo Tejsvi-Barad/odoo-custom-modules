@@ -1,10 +1,10 @@
-# Student Course Management System
+# Odoo Custom Modules
 
-A custom Odoo 18 module for managing students, courses, enrollments, and related academic information.
+A collection of custom modules developed using Odoo 18 as part of my M.Sc. IT learning and practical project work.
 
-## Overview
+## Projects
 
-The Student Course Management System is developed using the Odoo framework. It provides a centralized interface for managing student and course-related records.
+# 1. Student Course & Enrollment Management System
 
 ## Features
 
@@ -15,42 +15,38 @@ The Student Course Management System is developed using the Odoo framework. It p
 - Student ID Card Management
 - Dashboard Interface
 
-## Technologies Used
+# 2. Computer Service Management System
 
-- Odoo 18
-- Python
-- PostgreSQL
-- XML
-- Odoo ORM
-- JavaScript
-- CSS
+## Features
 
-## Installation
+ -Customer Management
+ -Computer Device Management
+ -Repair Request Management
+ -Device and Customer Relationship Management
+ -Repair Date and Estimated Cost Tracking
+ -Repair Status Management
 
-1. Clone or download this repository.
-2. Copy the `student_course` folder into your Odoo custom addons directory.
-3. Make sure the custom addons directory is configured in your Odoo configuration file.
-4. Restart the Odoo server.
-5. Open Odoo and activate Developer Mode.
-6. Update the Apps List.
-7. Search for **Student Course Management** and install the module.
+## Repository Structure
 
-## Project Structure
-
-```text
-student_course/
-├── models/
-├── security/
-├── static/
-├── views/
-├── __init__.py
-└── __manifest__.py
-```
-
-## Author
-
-Tejsvi Barad
+odoo-custom-modules/
+├── student_course/
+│   ├── models/
+│   ├── security/
+│   ├── static/
+│   ├── views/
+│   ├── __init__.py
+│   └── __manifest__.py
+│
+├── computer_service/
+│   ├── models/
+│   ├── security/
+│   ├── views/
+│   ├── __init__.py
+│   └── __manifest__.py
+│
+├── .gitignore
+└── README.md
 
 ## Project Status
 
-Learning project developed to practice custom module development in Odoo 18.
+These are academic learning projects developed to gain practical experience in Odoo module development, Python programming, ORM, relational fields, XML views, and database management.
