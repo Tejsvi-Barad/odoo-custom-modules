@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_computer_customer,access.computer.customer,computer_service.model_computer_customer,base.group_user,1,1,1,1
+access_computer_device,access.computer.device,computer_service.model_computer_device,base.group_user,1,1,1,1
+access_computer_repair,access.computer.repair,computer_service.model_computer_repair,base.group_user,1,1,1,1

@@ -1,0 +1,51 @@
+
+<odoo>
+
+    <!-- Repair Request List View -->
+    <record id="view_repair_request_list" model="ir.ui.view">
+        <field name="name">computer.repair.list</field>
+        <field name="model">computer.repair</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="device_id"/>
+                <field name="repair_date"/>
+                <field name="estimated_cost"/>
+                <field name="status"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Repair Request Form View -->
+    <record id="view_repair_request_form" model="ir.ui.view">
+        <field name="name">computer.repair.form</field>
+        <field name="model">computer.repair</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="device_id"/>
+                        <field name="repair_date"/>
+                        <field name="estimated_cost"/>
+                        <field name="status"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Repair Request Action -->
+    <record id="action_computer_repair" model="ir.actions.act_window">
+        <field name="name">Repair Requests</field>
+        <field name="res_model">computer.repair</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Repair Request Menu -->
+    <menuitem id="menu_computer_repair"
+              name="Repair Requests"
+              parent="menu_computer_service_root"
+              action="action_computer_repair"/>
+
+</odoo>

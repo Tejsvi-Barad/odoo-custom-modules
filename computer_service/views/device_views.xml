@@ -1,0 +1,49 @@
+
+<odoo>
+
+    <!-- Device List View -->
+    <record id="view_device_list" model="ir.ui.view">
+        <field name="name">computer.device.list</field>
+        <field name="model">computer.device</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="device_type"/>
+                <field name="serial_number"/>
+                <field name="customer_id"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Device Form View -->
+    <record id="view_device_form" model="ir.ui.view">
+        <field name="name">computer.device.form</field>
+        <field name="model">computer.device</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="device_type"/>
+                        <field name="serial_number"/>
+                        <field name="customer_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Device Action -->
+    <record id="action_computer_device" model="ir.actions.act_window">
+        <field name="name">Devices</field>
+        <field name="res_model">computer.device</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Device Menu -->
+    <menuitem id="menu_computer_device"
+              name="Devices"
+              parent="menu_computer_service_root"
+              action="action_computer_device"/>
+
+</odoo>
