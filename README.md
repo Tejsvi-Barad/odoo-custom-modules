@@ -19,33 +19,33 @@ A collection of custom modules developed using Odoo 18 as part of my M.Sc. IT le
 
 ## Features
 
- -Customer Management
- -Computer Device Management
- -Repair Request Management
- -Device and Customer Relationship Management
- -Repair Date and Estimated Cost Tracking
- -Repair Status Management
+ - Customer Management
+ - Computer Device Management
+ - Repair Request Management
+ - Device and Customer Relationship Management
+ - Repair Date and Estimated Cost Tracking
+ - Repair Status Management
 
 ## Repository Structure
 
 odoo-custom-modules/
-├── student_course/
-│   ├── models/
-│   ├── security/
-│   ├── static/
-│   ├── views/
-│   ├── __init__.py
-│   └── __manifest__.py
+├──  student_course/
+│   ├──  models/
+│   ├──  security/
+│   ├──  static/
+│   ├──  views/
+│   ├──  __init__.py
+│   └──  __manifest__.py
 │
-├── computer_service/
-│   ├── models/
-│   ├── security/
-│   ├── views/
-│   ├── __init__.py
-│   └── __manifest__.py
+├──  computer_service/
+│   ├──  models/
+│   ├──  security/
+│   ├──  views/
+│   ├──  __init__.py
+│   └──  __manifest__.py
 │
-├── .gitignore
-└── README.md
+├──  .gitignore
+└──  README.md
 
 ## Project Status
 
