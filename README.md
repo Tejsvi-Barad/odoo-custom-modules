@@ -6,7 +6,7 @@ A collection of custom modules developed using Odoo 18 as part of my M.Sc. IT le
 
 ## 1. Student Course & Enrollment Management System
 
-## Features
+### Features
 
 - Student Management
 - Course Management
@@ -17,7 +17,7 @@ A collection of custom modules developed using Odoo 18 as part of my M.Sc. IT le
 
 ## 2. Computer Service Management System
 
-## Features
+### Features
 
  - Customer Management
  - Computer Device Management
@@ -28,24 +28,26 @@ A collection of custom modules developed using Odoo 18 as part of my M.Sc. IT le
 
 ## Repository Structure
 
+```text
 odoo-custom-modules/
-├──  student_course/
-│   ├──  models/
-│   ├──  security/
-│   ├──  static/
-│   ├──  views/
-│   ├──  __init__.py
-│   └──  __manifest__.py
+├── student_course/
+│   ├── models/
+│   ├── security/
+│   ├── static/
+│   ├── views/
+│   ├── __init__.py
+│   └── __manifest__.py
 │
-├──  computer_service/
-│   ├──  models/
-│   ├──  security/
-│   ├──  views/
-│   ├──  __init__.py
-│   └──  __manifest__.py
+├── computer_service/
+│   ├── models/
+│   ├── security/
+│   ├── views/
+│   ├── __init__.py
+│   └── __manifest__.py
 │
-├──  .gitignore
-└──  README.md
+├── .gitignore
+└── README.md
+```
 
 ## Project Status
 
